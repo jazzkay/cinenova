@@ -5,7 +5,11 @@
       "Bash(npm install *)",
       "Bash(npx shadcn@latest init -d)",
       "Bash(npx shadcn@latest add badge dialog input skeleton tabs avatar dropdown-menu)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Jazz\\\\Desktop\\\\ALL PROJECTS\\\\movie_recommendation\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
