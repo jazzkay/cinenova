@@ -20,11 +20,11 @@ app.add_middleware(
         settings.frontend_url,
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        # Allow any local network IP (192.168.x.x, 10.x.x.x) for dev access from phone/other devices
-        "http://192.168.7.8:3000",
-        "http://192.168.1.1:3000",
     ],
-    allow_origin_regex=r"http://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+)(:\d+)?",
+    allow_origin_regex=(
+        r"https://.*\.vercel\.app"                                      # any Vercel preview/prod URL
+        r"|http://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+)(:\d+)?"  # local dev
+    ),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
