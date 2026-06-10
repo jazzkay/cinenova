@@ -9,12 +9,12 @@ router = APIRouter(prefix="/recommendations", tags=["recommendations"])
 
 
 @router.get("/")
-def recommendations(
-    limit: int = 20,
+async def recommendations(
+    limit: int = 40,
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ):
-    results = get_recommendations(user, db, limit=limit)
+    results = await get_recommendations(user, db, limit=limit)
     return [
         {
             "tmdb_id": r["movie"].tmdb_id,
